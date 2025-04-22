@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Aloud Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Read Aloud Pro</h1>
+    </header>
+    
+    <main>
+      <button id="start-reading" class="btn btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        Start Reading
+      </button>
+      
+      <div class="settings-section">
+        <h2>Settings</h2>
+        
+        <div class="setting-group">
+          <label for="rate">Rate</label>
+          <div class="range-container">
+            <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+            <span class="range-value" id="rate-value">1.0</span>
+          </div>
+        </div>
+        
+        <div class="setting-group">
+          <label for="pitch">Pitch</label>
+          <div class="range-container">
+            <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+            <span class="range-value" id="pitch-value">1.0</span>
+          </div>
+        </div>
+        
+        <div class="setting-group">
+          <label for="volume">Volume</label>
+          <div class="range-container">
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+            <span class="range-value" id="volume-value">1.0</span>
+          </div>
+        </div>
+        
+        <div class="setting-group">
+          <label for="voice">Voice</label>
+          <select id="voice" class="voice-select"></select>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <button id="stop-reading" class="btn btn-secondary">
+        <svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+        Stop Reading
+      </button>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
